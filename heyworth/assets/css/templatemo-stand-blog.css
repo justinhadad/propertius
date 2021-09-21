@@ -212,6 +212,8 @@ header .navbar {
     transition: all .3s ease 0s;
 }
 
+.col-lg-4 .col-lg-12 h5 {margin-bottom: 15px;}
+
 @media only screen and (max-width: 600px) { .navbar .navbar-brand h2 {font-size: 18px;}}
 
 
@@ -961,10 +963,6 @@ footer p a:hover {
 	text-align: center;
 }
 
-.about-us img {
-	width: 100%;
-	overflow: hidden;
-}
 
 .about-us p {
 	margin: 40px 0px;
