@@ -1,680 +1,271 @@
 <!DOCTYPE html>
-<html>
-    <head>
-          <!-- Keywords used in the website -->
-          <meta name="keywords" content="Propertius, Propertius Digital Library, University of North Carolina at Chapel Hill, Fedeli Propertius, Goold Propertius, Heyworth Propertius, Justin Hadad, Sharon James, University of North Carolina at Chapel Hill, UNC">
-          
-          <!-- Description for Website -->
-          <meta name="description" content="The accepted versions of Propertius' Elegies, digital.">
+<html lang="en">
 
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-6b53be0d94491620b86",applicationID:"781537153"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1194.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
-          <title>Propertius Digital Library</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
 
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TemplateMo">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
-          img.wp-smiley,
-          img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 .07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-          }
+  <title>The Propertius Project</title>
 
-          
-            * {
-          box-sizing: border-box;
-        }
-
-        pre { 
-                font-size: 16px; 
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                color: black; 
-                width: 100%; 
-                padding-left: 10px;
-                margin-left: auto;
-                margin-right: auto;
-                
-            }  
-
-        body {
-          font-family: "Open Sans", sans-serif;
-          text-justify: inter-word;
-          font-size: 11pt;
-          padding: 0px;
-        }
-        button {font-family: 'Charter'; font-size: 15px;}
-        
-        .column {
-          float: left;
-          padding: 10px;
-          padding-top: 0px
-        }
-        
-        .left {
-          width: 20%;
-        }
-        .right {
-          width: 30%;
-          position: relative;
-        }
-        
-        .middle {
-          width: 50%;
-        }
-        
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-stand-blog.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
 
-        .collapsible {
-            background-color: #235d86;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 80%;
-            border: none;
-            text-align: left;
-            outline: none;
-            outline-color: black;
-            font-size: 15px;
-           }
+  <!--hide line numbers on mobile and on tiny screens-->
+  <style>
 
-          .active, .collapsible:hover {
-            background-color: #4B9CD3;
-            }
+  @media screen and (max-width: 1024px) {
+    .LineNumbers {
+      display: none !important;
+    }
+  }
+</style>
 
-          .content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            padding-right: 10px;
-            }
+<!-- for accordion on sidebar -->
+<style>
 
-            label {
-                margin-right: 15px;
-                line-height: 32px;
-            }
+</style>
 
-            input {
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              appearance: none;
+</head>
 
-              border-radius: 50%;
-              width: 16px;
-              height: 16px;
+<body>
 
-              border: 2px solid #999;
-              transition: 0.1s all linear;
-              margin-right: 5px;
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>  
+  <!-- ***** Preloader End ***** -->
 
-              position: relative;
-              top: 4px;
-            }
-
-            input:checked {
-              border: 6px solid black;
-            }
-
-            a {
-              color: blue;
-              text-decoration: none;
-              text-transform: uppercase;
-              width: 100px;
-            }
-
-            .relative {
-              padding: 10px;
-              position: relative;
-              background-color: #fff;
-            } 
-            .navitem {
-              display: inline-block;
-              text-align: center;
-              height: 10px; 
-              text-align: left;
-              border: gray;
-              background-color: white;
-              color: black;
-              cursor: pointer;
-              font-weight: bold;
-            }
-            footer .widget ul>li a:hover, footer .widget ul>li:last-child a:hover {color: #fff;}
-
-
-          .abovefold .header-logo a{font-family:Georgia}a.brand{color:#fff}footer.content-info,#copyright{background-color:#235d86;font-size:.8em;line-height:1.6em}footer.content-info .container-fluid{padding-top:20px}#copyright{border:0;margin:0;padding:5px 0}.navbar-default .navbar-nav>li>a{font-size:16px}.header-logo,.brand-logo{font-weight:400;font-size:3.3em;line-height:1em;margin-top:5%}.navbar-nav li.active{background:#7BAFD4}.abovefold{padding:30px 0}.search-form{margin-top:10%}.widget ul.menu li>ul.dropdown-menu{position:relative;float:none;box-shadow:none;border:0;margin-left:5%}.open>.dropdown-menu,.active>.dropdown-menu{display:block}.widget .dropdown-menu>li>a{white-space:normal;width:95%}@media print{a[href]:after{content:none!important}a.brand{display:none!important}.gray{display:none!important;visibility:hidden}.col-sm-4{display:none!important;visibility:hidden}}https://econ.sites.unc.edu/events/
-          body.page-id-1460 .table td{padding:3px 8px 2px 8px}.profile-details-header{background:#D8E9F3}.col-sm-8.directory-profile-details{text-align:center;margin-top:5%}.profile-display-name{font-size:1.3em}.directory-titles{font-size:1.7em}.post-email{margin-top:-20px}.post-phone{margin-top:-50px;width:400px}.divisions-container .post-left .post-back,.divisions-container .post-left .post-author{border-bottom:2px solid #fff}.divisions-container .entry.post{min-height:205px;margin-top:-20px}.divisions-container .entry.post .post-left .post-phone,.divisions-container .entry.post .post-left .post-email{display:block;line-height:15px;padding:10px 15px 15px 215px;text-align:left}li.list-group-item.division-item h4{line-height:1.5em}h4.tribe-event-title{font-size:14px;font-weight:normal;line-height:18px}.tribe-event-duration{font-size:12px;margin:-10px 0}body.page-id-89 .sidebar .widget{width:85%}body.page-id-2860 p{line-height:18px}.soliloquy-container .soliloquy-caption .soliloquy-caption-inside{background-color:rgba(35,93,134,.7)!important;line-height:1.5em!important}.soliloquy-fc-title a{line-height:1.5em}#comments .alert-warning{display:none}.bbp-breadcrumb,.bbp-forum-description{display:none}.bbp-form legend{font-size:1.5em;margin-bottom:0}</style><!-- End Custom CSS -->
-
-
-                  </style>
-
-        <script language="JavaScript" type="text/javascript">
-          function a10892F() {
-              var rads=document.forms[0].MugSelect;
-          for (var val,z0=0;z0<rads.length;z0++){
-            if (rads[z0].checked){
-              val=rads[z0].value;
-              break;
-            }
-          }
-            var choice1 = "Fedeli";
-            var choice2 = "Goold";
-            var choice3 = "Heyworth";
-
-          
-            if (val == choice1)
-              {
-                document.getElementById('a10892').innerHTML = `
-  <div>
-    <pre>
-      Cynthia prima suis miserum me cepit ocellis,
-          contactum nullis ante cupidinibus.
-      tum mihi constantis deiecit lumina fastus
-          et caput impositis pressit Amor pedibus,
-      donec me docuit castas odisse puellas                 5
-          improbus, et nullo vivere consilio.
-      ei mihi, iam toto furor hic non deficit anno,
-          cum tamen adversos cogor habere deos.
-      Milanion nullos fugiendo, Tulle, labores
-          saevitiam durae contudit Iasidos.                 10
-      nam modo Partheniis amens errabat in antris,
-          ibat et hirsutas ille videre feras;
-      ille etiam Hylaei percussus vulnere rami
-          saucius Arcadiis rupibus ingemuit.
-      ergo velocem potuit domuisse puellam:                 15
-          tantum in amore preces et bene facta valent.
-      in me tardus Amor non [n]ullas cogitat artis,
-          nec meminit notas, ut prius, ire vias.
-      at vos, deductae quibus est fallacia lunae
-          et labor in magicis sacra piare focis,            20
-      en agedum dominae mentem convertite nostrae,
-          et facite illa meo palleat ore magis!
-      tunc ego crediderim vobis et sidera et amnis
-          posse cythalinis ducere carminibus.
-      aut vos, qui sero lapsum revocatis, amici,            25
-          quaerite non sani pectoris auxilia.
-      fortiter et ferrum saevos patiemur et ignis,
-          sit modo libertas quae velit ira loqui.
-      ferte per extremas gentis et ferte per undas,
-          qua non ulla meum femina norit iter.              30
-      vos remanete, quibus facili deus annuit aure,
-          sitis et in tuto semper amore pares.
-      in me nostra Venus noctes exercet amaras,
-          et nullo vacuus tempore defit Amor.
-      hoc, moneo, vitate malum: sua quemque moretur         35
-          cura, neque assueto mutet amore locum.
-      quod si quis monitis tardas adverterit auris,
-          heu referet quanto verba dolore mea!</pre>
-  </div>
-`;
-              }
-            else if (val == choice2)
-              {
-                document.getElementById('a10892').innerHTML = `
-  <div>
-   <pre>
-      Cynthia prima suis miserum me cepit ocellis,
-          contactum nullis ante Cupidinibus.
-      tum mihi constantis deiecit lumina fastus
-          et caput impositis pressit Amor pedibus,
-      donec me docuit castas odisse puellas                 5
-          improbus, et nullo vivere consilio.
-      ei mihi iam toto furor hic non deficit anno,
-          cum tamen adversos cogor habere deos.
-      Milanion nullos fugiendo, Tulle, labores
-          saevitiam durae contudit Iasidos.                 10
-      nam modo Partheniis amens errabat in antris,
-          rursus in hirsutas ibat et ille feras;
-      ille etiam Hylaei percussus vulnere rami
-          saucius Arcadiis rupibus ingemuit.
-      ergo velocem potuit domuisse puellam:                 15
-          tantum in amore fides et benefacta valent.
-      in me tardus Amor non ullas cogitat artes,
-          nec meminit notas, ut prius, ire vias.
-      at vos, deductae quibus est pellacia lunae
-          et labor in magicis sacra piare focis,            20
-      en agedum dominae mentem convertite nostrae,
-          et facite illa meo palleat ore magis!
-      tunc ego crediderim Manes et sidera vobis
-          posse Cytinaeis ducere carminibus.
-      aut vos, qui sero lapsum revocatis, amici,            25
-          quaerite non sani pectoris auxilia.
-      fortiter et ferrum saevos patiemur et ignes,
-          sit modo libertas quae velit ira loqui.
-      ferte per extremas gentes et ferte per undas,
-          qua non ulla meum femina norit iter.              30
-      vos remanete, quibus facili deus annuit aure,
-          sitis et in tuto semper amore pares.
-      nam me nostra Venus noctes exercet amaras,
-          et nullo vacuus tempore defit Amor.
-      hoc, moneo, vitate malum: sua quemque moretur         35
-          cura, neque assueto mutet amore torum.
-      quod si quis monitis tardas adverterit aures,
-          heu referet quanto verba dolore mea!</pre>
-  </div>
-`;
-              }
-            else if (val == choice3)
-              {
-                document.getElementById('a10892').innerHTML = `
-                <div>
-   <pre>
-      Cynthia prima suis miserum me cepit ocellis,
-          contactum nullis ante cupidinibus.
-      tum mihi constantis deiecit lumina fastus
-          et caput impositis pressit Amor pedibus,
-      donec me docuit castas odisse puellas                 5
-          improbus, et nullo vivere consilio.
-      ei mihi, iam toto furor hic non deficit anno,
-          cum tamen adversos cogor habere deos.
-      Milanion nullos fugiendo, Tulle, labores
-          saevitiam durae contudit Iasidos.                 10
-      nam modo Partheniis amens errabat in antris,
-          rursus in hirsutas ibat et ille feras;
-      ille etiam Hylaei percussus vulnere rami
-          saucius Arcadiis rupibus ingemuit.
-      ergo velocem potuit domuisse puellam:                 15
-          tantum in amore fides et benefacta valent.
-      in me tardus Amor non ullas cogitat artes,
-          nec meminit notas, ut prius, ire vias.
-      at vos, deductae quibus est pellacia lunae
-          et labor in magicis sacra piare focis,            20
-      en agedum dominae mentem convertite nostrae,
-          et facite illa meo palleat ore magis!
-      tunc ego crediderim Manes et sidera vobis
-          posse Cytinaeis ducere carminibus.
-      aut vos, qui sero lapsum revocatis, amici,            25
-          quaerite non sani pectoris auxilia.
-      fortiter et ferrum saevos patiemur et ignes,
-          sit modo libertas quae velit ira loqui.
-      ferte per extremas gentes et ferte per undas,
-          qua non ulla meum femina norit iter.              30
-      vos remanete, quibus facili deus annuit aure,
-          sitis et in tuto semper amore pares.
-      nam me nostra Venus noctes exercet amaras,
-          et nullo vacuus tempore defit Amor.
-      hoc, moneo, vitate malum: sua quemque moretur         35
-          cura, neque assueto mutet amore torum.
-      quod si quis monitis tardas adverterit aures,
-          heu referet quanto verba dolore mea!</pre>
-  </div>
-`;
-              }
-          
-   
-
-
-            }
-          </script>
-        </head>
-
-
-
-        <body>
-        
-
-        <div class="relative">
-          <h2>Propertius Digital Library</h2>
-              <div class="navitem"></div>
-                <a style = "color: black; text-decoration: none; text-transform: none; width: 100px;" href="https://classics.unc.edu/">University of North Carolina Classics Department</a>
-            
+  <!-- Header -->
+  <header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h2>The Propertius Project<em>.</em></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Elegies</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
       </div>
-        
-        <div class="row">
-          <div class="column left">
-            <h4>Propertius, <em>Elegies</em></h4>
-            
-            <button class="collapsible">Liber 1</button>
-                <div class="content">
-                  <br>
-                   <a href="1-1.html">Poem 1</a>
-                   <br>
-                   <a href="1-2.html">Poem 2</a>
-                   <br>
-                   <a href="1-3.html">Poem 3</a>
-                   <br>
-                   <a href="1-4.html">Poem 4</a>
-                   <br>
-                   <a href="1-5.html">Poem 5</a>
-                   <br>
-                   <a href="1-6.html">Poem 6</a>
-                   <br>
-                   <a href="1-7.html">Poem 7</a>
-                   <br>
-                   <a href="1-8.html">Poem 8</a>
-                   <br>
-                   <a href="1-9.html">Poem 9</a>
-                   <br>
-                   <a href="1-10.html">Poem 10</a>
-                   <br>
-                   <a href="1-11.html">Poem 11</a>
-                   <br>
-                   <a href="1-12.html">Poem 12</a>
-                   <br>
-                   <a href="1-13.html">Poem 13</a>
-                   <br>
-                   <a href="1-14.html">Poem 14</a>
-                   <br>
-                   <a href="1-15.html">Poem 15</a>
-                   <br>
-                   <a href="1-16.html">Poem 16</a>
-                   <br>
-                   <a href="1-17.html">Poem 17</a>
-                   <br>
-                   <a href="1-18.html">Poem 18</a>
-                   <br>
-                   <a href="1-19.html">Poem 19</a>
-                   <br>
-                   <a href="1-20.html">Poem 20</a>
-                   <br>
-                   <a href="1-21.html">Poem 21</a>
-                   <br>
-                   <a href="1-22.html">Poem 22</a>
+    </nav>
+  </header>
 
-                   <br>
-                   <br>
-                  </div>
+  <!-- Page Content -->
+  <!-- Banner Starts Here -->
+  <div class="main-banner header-text">
+    <div class="container-fluid">
+      <div class="owl-banner owl-carousel">
+      </div>
+    </div>
+  </div>
+  <!-- Banner Ends Here -->
 
-            <button class="collapsible">Liber 2</button>
-                <div class="content">
-                  <br>
 
-                  <a href="2-1.html">Poem 1</a>
-                  <br>
-                  <a href="2-2.html">Poem 2</a>
-                  <br>
-                  <a href="2-3.html">Poem 3</a>
-                  <br>
-                  <a href="2-4.html">Poem 4</a>
-                  <br>
-                  <a href="2-5.html">Poem 5</a>
-                  <br>
-                  <a href="2-6.html">Poem 6</a>
-                  <br>
-                  <a href="2-7.html">Poem 7</a>
-                  <br>
-                  <a href="2-8.html">Poem 8</a>
-                  <br>
-                  <a href="2-9.html">Poem 9</a>
-                  <br>
-                  <a href="2-10.html">Poem 10</a>
-                  <br>
-                  <a href="2-11.html">Poem 11</a>
-                  <br>
-                  <a href="2-12.html">Poem 12</a>
-                  <br>
-                  <a href="2-13.html">Poem 13</a>
-                  <br>
-                  <a href="2-14.html">Poem 14</a>
-                  <br>
-                  <a href="2-15.html">Poem 15</a>
-                  <br>
-                  <a href="2-16.html">Poem 16</a>
-                  <br>
-                  <a href="2-17.html">Poem 17</a>
-                  <br>
-                  <a href="2-18.html">Poem 18</a>
-                  <br>
-                  <a href="2-19.html">Poem 19</a>
-                  <br>
-                  <a href="2-20.html">Poem 20</a>
-                  <br>
-                  <a href="2-21.html">Poem 21</a>
-                  <br>
-                  <a href="2-22.html">Poem 22</a>
-                  <br>
-                  <a href="2-23.html">Poem 22</a>   
 
-                  <br>
-                  <br>
 
-     
- 
-                </div>
-
-            <button class="collapsible">Liber 3</button>
-            <div class="content">
-              <br>
-
-              <a href="1-1.html">Poem 1</a>
-              <br>
-              <a href="1-2.html">Poem 2</a>
-              <br>
-              <a href="1-3.html">Poem 3</a>
-              <br>
-              <a href="1-4.html">Poem 4</a>
-              <br>
-              <a href="1-5.html">Poem 5</a>
-              <br>
-              <a href="1-6.html">Poem 6</a>
-              <br>
-              <a href="1-7.html">Poem 7</a>
-              <br>
-              <a href="1-8.html">Poem 8</a>
-              <br>
-              <a href="1-9.html">Poem 9</a>
-              <br>
-              <a href="1-10.html">Poem 10</a>
-              <br>
-              <a href="1-11.html">Poem 11</a>
-              <br>
-              <a href="1-12.html">Poem 12</a>
-              <br>
-              <a href="1-13.html">Poem 13</a>
-              <br>
-              <a href="1-14.html">Poem 14</a>
-              <br>
-              <a href="1-15.html">Poem 15</a>
-              <br>
-              <a href="1-16.html">Poem 16</a>
-              <br>
-              <a href="1-17.html">Poem 17</a>
-              <br>
-              <a href="1-18.html">Poem 18</a>
-              <br>
-              <a href="1-19.html">Poem 19</a>
-              <br>
-              <a href="1-20.html">Poem 20</a>
-              <br>
-              <a href="1-21.html">Poem 21</a>
-              <br>
-              <a href="1-22.html">Poem 22</a>
-              <br>
-              <br>
-             </div>
-             
-            <button class="collapsible">Liber 4</button>
-             <div class="content">
-              <a href="1-1.html">Poem 1</a>
-              <br>
-              <a href="1-2.html">Poem 2</a>
-              <br>
-              <a href="1-3.html">Poem 3</a>
-              <br>
-              <a href="1-4.html">Poem 4</a>
-              <br>
-              <a href="1-5.html">Poem 5</a>
-              <br>
-              <a href="1-6.html">Poem 6</a>
-              <br>
-              <a href="1-7.html">Poem 7</a>
-              <br>
-              <a href="1-8.html">Poem 8</a>
-              <br>
-              <a href="1-9.html">Poem 9</a>
-              <br>
-              <a href="1-10.html">Poem 10</a>
-              <br>
-              <a href="1-11.html">Poem 11</a>
-              <br>
-              <a href="1-12.html">Poem 12</a>
-              <br>
-              <a href="1-13.html">Poem 13</a>
-              <br>
-              <a href="1-14.html">Poem 14</a>
-              <br>
-              <a href="1-15.html">Poem 15</a>
-              <br>
-              <a href="1-16.html">Poem 16</a>
-              <br>
-              <a href="1-17.html">Poem 17</a>
-              <br>
-              <a href="1-18.html">Poem 18</a>
-              <br>
-              <a href="1-19.html">Poem 19</a>
-              <br>
-              <a href="1-20.html">Poem 20</a>
-              <br>
-              <a href="1-21.html">Poem 21</a>
-              <br>
-              <a href="1-22.html">Poem 22</a>
-              <br>
+  <section class="Texts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8" style="margin-top: 30px">
+          <h5>Choose the version of Propertius' <em>Elegies</em> you want to explore, or choose a poem and get started.</h6>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-lg-8">
+                <h6 style= "margin-left: 30px; margin-bottom: 15px">Our goal...</h6>
+                <p>The Propertius Project publicizes three different editions of Propertius' <em>Elegies</em> that scholars have agreed upon. Propertius' texts have previously been inaccessible to much of the population. Our goal is to provide students, teachers, and faculty the chance to engage with the Latin without cost, and to understand how textual reception influences scholars even today.</p>
               </div>
+
+              <div class="col-lg-8">
+                <h6 style= "margin-left: 30px; margin-top: 30px; margin-bottom: 15px">Courtesy of...</h6>
+                <p>The editions of <em>Elegies</em> produced here are Paolo Fedeli's 1984 edition (ed. Teubner), G.P. Goold's 1990 (ed. Harvard), and Stephen Heyworth's 1990 (ed. Oxford). Each has been recopied under fair use claim, and The Propertius Project, Inc. acts as redistributor with novel addition. Read more in our privacy policy <a href=about.html>here</a>.
+              </div>
+            </div>
           </div>
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <div class="row">
+                <div class="col-lg-12" style="margin-top: 50px">
+                  <h5>Change Version</h5>
+                  <p><h9><a href=fedeli/1-1.html>Fedeli, 1984</a></h9></p>
+                  <p><h9><a href=goold/1-1.html>Goold, 1990</a></h9></p>
+                  <p><h9><a href=../heyworth/1-1.html>Heyworth, 2007</a></h9></p>
+                </div>
+                <div class="col-lg-12" style="margin-top: 50px">
+                  <h5>Poems</h5>
+                  <details><summary>Book 1</summary> 
+                    <a href=fedeli/1-1.html>1</a>
+                    <a href=fedeli/1-2.html>2</a>
+                    <a href=fedeli/1-3.html>3</a>
+                    <a href=fedeli/1-4.html>4</a>
+                    <a href=fedeli/1-5.html>5</a>
+                    <a href=fedeli/1-6.html>6</a>
+                    <a href=fedeli/1-7.html>7</a>
+                    <a href=fedeli/1-8.html>8</a>
+                    <a href=fedeli/1-9.html>9</a>
+                    <a href=fedeli/1-10.html>10</a>
+                    <a href=fedeli/1-11.html>11</a>
+                    <a href=fedeli/1-12.html>12</a>
+                    <a href=fedeli/1-13.html>13</a>
+                    <a href=fedeli/1-14.html>14</a>
+                    <a href=fedeli/1-15.html>15</a>
+                    <a href=fedeli/1-16.html>16</a>
+                    <a href=fedeli/1-17.html>17</a>
+                    <a href=fedeli/1-18.html>18</a>
+                    <a href=fedeli/1-19.html>19</a>
+                    <a href=fedeli/1-20.html>20</a>
+                    <a href=fedeli/1-21.html>21</a>
+                    <a href=fedeli/1-22.html>22</a>
+                    <a href=fedeli/1-23.html>23</a>
+                    <a href=fedeli/1-24.html>24</a>
+                  </details>
+                  <details><summary>Book 2</summary> 
+                    <a href=fedeli/2-1.html>1</a>
+                    <a href=fedeli/2-2.html>2</a>
+                    <a href=fedeli/2-3.html>3</a>
+                    <a href=fedeli/2-4.html>4</a>
+                    <a href=fedeli/2-5.html>5</a>
+                    <a href=fedeli/2-6.html>6</a>
+                    <a href=fedeli/2-7.html>7</a>
+                    <a href=fedeli/2-8.html>8</a>
+                    <a href=fedeli/2-9.html>9</a>
+                    <a href=fedeli/2-10.html>10</a>
+                    <a href=fedeli/2-11.html>11</a>
+                    <a href=fedeli/2-12.html>12</a>
+                    <a href=fedeli/2-13.html>13</a>
+                    <a href=fedeli/2-14.html>14</a>
+                    <a href=fedeli/2-15.html>15</a>
+                    <a href=fedeli/2-16.html>16</a>
+                    <a href=fedeli/2-17.html>17</a>
+                    <a href=fedeli/2-18.html>18</a>
+                    <a href=fedeli/2-19.html>19</a>
+                    <a href=fedeli/2-20.html>20</a>
+                    <a href=fedeli/2-21.html>21</a>
+                    <a href=fedeli/2-22.html>22</a>
+                    <a href=fedeli/2-23.html>23</a>
+                    <a href=fedeli/2-24.html>24</a>
+                  </details>
+                  <details><summary>Book 3</summary> 
+                    <a href=fedeli/3-1.html>1</a>
+                    <a href=fedeli/3-2.html>2</a>
+                    <a href=fedeli/3-3.html>3</a>
+                    <a href=fedeli/3-4.html>4</a>
+                    <a href=fedeli/3-5.html>5</a>
+                    <a href=fedeli/3-6.html>6</a>
+                    <a href=fedeli/3-7.html>7</a>
+                    <a href=fedeli/3-8.html>8</a>
+                    <a href=fedeli/3-9.html>9</a>
+                    <a href=fedeli/3-10.html>10</a>
+                    <a href=fedeli/3-11.html>11</a>
+                    <a href=fedeli/3-12.html>12</a>
+                    <a href=fedeli/3-13.html>13</a>
+                    <a href=fedeli/3-14.html>14</a>
+                    <a href=fedeli/3-15.html>15</a>
+                    <a href=fedeli/3-16.html>16</a>
+                    <a href=fedeli/3-17.html>17</a>
+                    <a href=fedeli/3-18.html>18</a>
+                    <a href=fedeli/3-19.html>19</a>
+                    <a href=fedeli/3-20.html>20</a>
+                    <a href=fedeli/3-21.html>21</a>
+                    <a href=fedeli/3-22.html>22</a>
+                    <a href=fedeli/3-23.html>23</a>
+                    <a href=fedeli/3-24.html>24</a>
+                  </details>
+                  <details><summary>Book 4</summary> 
+                    <a href=fedeli/4-1.html>1</a>
+                    <a href=fedeli/4-2.html>2</a>
+                    <a href=fedeli/4-3.html>3</a>
+                    <a href=fedeli/4-4.html>4</a>
+                    <a href=fedeli/4-5.html>5</a>
+                    <a href=fedeli/4-6.html>6</a>
+                    <a href=fedeli/4-7.html>7</a>
+                    <a href=fedeli/4-8.html>8</a>
+                    <a href=fedeli/4-9.html>9</a>
+                    <a href=fedeli/4-10.html>10</a>
+                    <a href=fedeli/4-11.html>11</a>
+                    <a href=fedeli/4-12.html>12</a>
+                    <a href=fedeli/4-13.html>13</a>
+                    <a href=fedeli/4-14.html>14</a>
+                    <a href=fedeli/4-15.html>15</a>
+                    <a href=fedeli/4-16.html>16</a>
+                    <a href=fedeli/4-17.html>17</a>
+                    <a href=fedeli/4-18.html>18</a>
+                    <a href=fedeli/4-19.html>19</a>
+                    <a href=fedeli/4-20.html>20</a>
+                    <a href=fedeli/4-21.html>21</a>
+                    <a href=fedeli/4-22.html>22</a>
+                    <a href=fedeli/4-23.html>23</a>
+                    <a href=fedeli/4-24.html>24</a>
+                  </details>
 
-
-
-
-          <div id="book-text" class="column middle" style="white-space: pre-line; padding-left: 0px; padding-right: 80px; font-family: Times New Roman, Times, serif">
-
-            <!-- <form>
-              <input name="MugSelect" type="radio" value="Fedeli" onclick='a10892F()' />
-              <input name="MugSelect" type="radio" value="Goold" onclick='a10892F()' />
-              <input name="MugSelect" type="radio" value="Heyworth" onclick='a10892F()' />
-              <div align = center id="a10892">Text</div>
-              </form> -->
-              <div id="a10892">
-
-                <pre>
-      Cynthia prima suis miserum me cepit ocellis,
-          contactum nullis ante cupidinibus.
-      tum mihi constantis deiecit lumina fastus
-          et caput impositis pressit Amor pedibus,
-      donec me docuit castas odisse puellas                 5
-          improbus, et nullo vivere consilio.
-      ei mihi, iam toto furor hic non deficit anno,
-          cum tamen adversos cogor habere deos.
-      Milanion nullos fugiendo, Tulle, labores
-          saevitiam durae contudit Iasidos.                 10
-      nam modo Partheniis amens errabat in antris,
-          rursus in hirsutas ibat et ille feras;
-      ille etiam Hylaei percussus vulnere rami
-          saucius Arcadiis rupibus ingemuit.
-      ergo velocem potuit domuisse puellam:                 15
-          tantum in amore fides et benefacta valent.
-      in me tardus Amor non ullas cogitat artes,
-          nec meminit notas, ut prius, ire vias.
-      at vos, deductae quibus est pellacia lunae
-          et labor in magicis sacra piare focis,            20
-      en agedum dominae mentem convertite nostrae,
-          et facite illa meo palleat ore magis!
-      tunc ego crediderim Manes et sidera vobis
-          posse Cytinaeis ducere carminibus.
-      aut vos, qui sero lapsum revocatis, amici,            25
-          quaerite non sani pectoris auxilia.
-      fortiter et ferrum saevos patiemur et ignes,
-          sit modo libertas quae velit ira loqui.
-      ferte per extremas gentes et ferte per undas,
-          qua non ulla meum femina norit iter.              30
-      vos remanete, quibus facili deus annuit aure,
-          sitis et in tuto semper amore pares.
-      nam me nostra Venus noctes exercet amaras,
-          et nullo vacuus tempore defit Amor.
-      hoc, moneo, vitate malum: sua quemque moretur         35
-          cura, neque assueto mutet amore torum.
-      quod si quis monitis tardas adverterit aures,
-          heu referet quanto verba dolore mea!</pre>
-
+                </div>
+              </div>
+            </div>
           </div>
-          </div>
-          <div class="column right">
-            <h3>Latin Edition</h3>
-
-            <!-- <form action="/action_page.php">
-                <input type="radio" id="fedeli" name="gender" value="fedeli" checked>
-                <label for="fedeli">Fedeli (Teubner) 1984</label><br>
-                <input type="radio" id="goold" name="gender" value="goold">
-                <label for="Goold">Goold (Loeb) 1990</label><br>
-                <input type="radio" id="heyworth" name="gender" value="Heyworth">
-                <label for="Heyworth">Heyworth</label> -->
-
-                <!-- <label><input type="radio" id="unitedStates"  name="country" value="United_States" checked>Fedeli (Teubner) 1984</label>
-                <br>
-                <label><input type="radio" id="canada"  name="country" value="Canada">Goold (Loeb) 1990</label>
-                <br>
-
-                <label><input type="radio" id="other"  name="country" value="Other">Heyworth</label> -->
-                <form>
-                <label><input name="MugSelect" type="radio" value="Fedeli" onclick='a10892F()' checked> Fedeli (Teubner) 1984</label>
-                <br>
-                <label><input name="MugSelect" type="radio" value="Goold" onclick='a10892F()'> Goold (Loeb) 1990</label>
-                <br>
-                <label><input name="MugSelect" type="radio" value="Heyworth" onclick='a10892F()'> Heyworth</label>
-              </form>
         </div>
-        </div>
-
-
-
-
-
-        <div class="row">
-        </div>
-
-<div class="row" style="color: #D3D3D3;">
-    <footer class="content-info">
-<div class="footer-container container-fluid" style="padding: 30px">
-<div class="row">
-<section class="widget text-5 widget_text col-md-4 col-sm-6">			<div class="textwidget"><img style="max-width:25%" src="Research_logo_white_h.png" alt="UNC Research">
-</div>
-</section><section class="widget text-3 widget_text col-md-4 col-sm-6">			<div class="textwidget"><p>Murphey Hall<br />
-University of North Carolina<br />
-Chapel Hill, NC  27516</p>
-</div>
-<p class="copyright">&copy; 2021, Department of Classics at UNC Chapel Hill.</p>
-
-</div>
-</div>
-</section>
-</div>
-</div>
       </div>
-</footer>
+    </section>
 
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright-text">
+              <p>Copyright 2021, Department of Classics at UNC Chapel Hill.
 
+               | Compiled: <a href="https://justinhadad.com" target="_parent">justinhadad.com</a></p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </footer>
 
+     <!-- Bootstrap core JavaScript -->
+     <script src="vendor/jquery/jquery.min.js"></script>
+     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+     <!-- Additional Scripts -->
+     <script src="assets/js/custom.js"></script>
+     <script src="assets/js/owl.js"></script>
+     <script src="assets/js/slick.js"></script>
+     <script src="assets/js/isotope.js"></script>
+     <script src="assets/js/accordions.js"></script>
 
-        <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-            
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                } 
-              });
-            }
-            </script>
+     <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+        }
+      }
+    </script>
 
-
-</body>
-</html> 
+  </body>
+  </html>
